@@ -74,23 +74,23 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         rdbBuy?.isChecked = true
         checkData()
-//        Timer().scheduleAtFixedRate(object : TimerTask() {
-//            override fun run() {
-//                if(isOnline()){
-//                    checkData()
-//                    this@MainActivity.runOnUiThread(java.lang.Runnable {
-//                        txvInternetConnection?.visibility = View.GONE
-//                        clsPublic.bolInternetConnection = true
-//                    })
-//                }else {
-//                    this@MainActivity.runOnUiThread(java.lang.Runnable {
-//                        txvInternetConnection?.visibility = View.VISIBLE
-//                        clsPublic.bolInternetConnection = false
-//                    })
-//                }
-//            }
-//        }, 0, 5000)
-//
+        Timer().scheduleAtFixedRate(object : TimerTask() {
+            override fun run() {
+                if(isOnline()){
+                    checkData()
+                    this@MainActivity.runOnUiThread(java.lang.Runnable {
+                        txvInternetConnection?.visibility = View.GONE
+                        clsPublic.bolInternetConnection = true
+                    })
+                }else {
+                    this@MainActivity.runOnUiThread(java.lang.Runnable {
+                        txvInternetConnection?.visibility = View.VISIBLE
+                        clsPublic.bolInternetConnection = false
+                    })
+                }
+            }
+        }, 0, 5000)
+
     }
     fun isOnline(): Boolean {
         val cm = clsPublic.act?.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
