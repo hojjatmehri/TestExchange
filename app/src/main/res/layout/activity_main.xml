@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgorund"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:textColor="@color/text_color"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txv_internet_connection"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="sans-serif"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/red"
+        android:text="@string/you_are_not_connected_to_the_internet"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="start"
+                android:text="EUR balance"
+                android:textColor="@color/text_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txv_total_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="start"
+                android:text="€ 200.00"
+                android:textColor="@color/text_color"
+                android:textSize="26sp" />
+        </LinearLayout>
+
+        <com.github.angads25.toggle.widget.LabeledSwitch
+            android:id="@+id/switch_dark_light"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="14sp"
+            app:colorBorder="@color/main_list_bg"
+            app:on="false" />
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_below="@+id/switch_dark_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:theme="@style/AppTheme.Toolbar" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rel_sgm"
+            android:layout_marginTop="-25dp"
+            android:background="@drawable/list_shape"
+            android:orientation="vertical">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_currencies"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/currency_item" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rel_sgm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="270dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/shape_bg" />
+
+            <info.hoang8f.android.segmented.SegmentedGroup xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+                android:layout_width="270dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal"
+                android:textDirection="ltr"
+                segmentedgroup:sc_border_width="2dp"
+                segmentedgroup:sc_checked_text_color="@color/backgorund"
+                segmentedgroup:sc_corner_radius="40dp"
+                segmentedgroup:sc_tint_color="#9CC9FF">
+
+                <RadioButton
+                    android:id="@+id/rdb_buy"
+                    style="@style/RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/main_list_bg"
+                    android:checked="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/buy"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rdb_sell"
+                    style="@style/RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/main_list_bg"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/sell"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </info.hoang8f.android.segmented.SegmentedGroup>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

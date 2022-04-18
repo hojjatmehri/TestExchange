@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/lil_currency_main_item"
+    android:background="@color/transparent"
+    android:padding="10dp"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_currency_item_flag"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/backgorund"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txv_currency_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="start"
+            android:text="USD"
+            android:textColor="@color/backgorund"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txv_currency_item_coountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:gravity="start"
+            android:text="USA"
+            android:textColor="@color/backgorund"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txv_currency_item_rate_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="end"
+            android:layout_gravity="end"
+            android:text="Rate to Euro"
+            android:textColor="@color/backgorund"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txv_currency_item_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:fontFamily="sans-serif-light"
+            android:gravity="end"
+            android:text="33.88"
+            android:textColor="@color/backgorund"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

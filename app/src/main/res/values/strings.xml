@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Test Exchange</string>
+    <string name="unknown">Unknown</string>
+    <string name="loading_downloading">Please wait\nDownloading information....</string>
+    <string name="loading_uploading">Please wait\nUploading information....</string>
+    <string name="loading_processing">Please wait\nProcessing....s</string>
+    <string name="message_error">Error in getting information\nPlease try several minutes later</string>
+    <string name="message_next_version">This option will be enabled in the future</string>
+    <string name="message_information_not_found">No information available</string>
+    <string name="message_nothing_found">Nothing found</string>
+    <string name="successfully_inserted">Successfully inserted</string>
+    <string name="successfully_done">Successfully done</string>
+    <string name="message_exit">Press exit again</string>
+    <string name="buy">Buy</string>
+    <string name="sell">Sell</string>
+    <string name="you_are_not_connected_to_the_internet">Internet connection is lost</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="amount">Amount</string>
+    <string name="zero_error">Your current amount will  be  less than 0</string>
+</resources>
